@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Delete } from '@nestjs/common';
 import { ProductsService } from './products.service';
 
 @Controller('products')
@@ -14,4 +14,11 @@ getAll(): any {
   public getById(@Param('id') id: string) {
     return this.productsService.getById(id);
   }
+
+  @Delete('/:id')
+deleteById(@Param('id') id: string) {
+  this.productsService.deleteById(id);
+  return { success: true };
+}
+
 }
