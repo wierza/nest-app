@@ -9,5 +9,9 @@ export class OrdersService {
 
     public getById(id: Order['id']): Order | null {
         return db.orders.find((p) => p.id === id);
-      }
+    }
+
+    public deleteById(id: Order['id']): void {
+        db.orders = db.orders.filter((p) => p.id !== id);
+    }
 }
