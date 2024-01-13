@@ -15,7 +15,6 @@ model Product {
   name String
   price Int
   description String
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -25,7 +24,6 @@ model Order {
   productId String
   client String
   address String
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
