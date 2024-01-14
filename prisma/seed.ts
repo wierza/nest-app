@@ -42,19 +42,16 @@ function getClients() {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17201',
       name: 'Alice Smith',
       address: 'Sunset Boulevard 34, Los Angeles',
-      orderId: 'fd105551-0f0d-4a9f-bc41-c559c8a17262',
     },
     {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17202',
       name: 'Bob Johnson',
       address: '456 Oak Street, San Francisco',
-      orderId: 'fd105551-0f0d-4a9f-bc41-c559c8a17261',
     },
     {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17203',
       name: 'Eve Wilson',
       address: '789 Pine Street, Seattle',
-      orderId: 'fd105551-0f0d-4a9f-bc41-c559c8a17260',
     },
   ];
 }
