@@ -5,6 +5,7 @@ import { Product } from '@prisma/client'
 @Injectable()
 export class ProductsService {
   constructor(private prismaService: PrismaService) {}
+
   public getAll(): Promise<Product[]> {
     return this.prismaService.product.findMany();
   }
@@ -12,6 +13,19 @@ export class ProductsService {
   public getById(id: Product['id']): Promise<Product | null> {
     return this.prismaService.product.findUnique({
       where: { id },
+    });
+  }
+
+  public getAllExtended(): Promise<Product[]> {
+    return this.prismaService.product.findMany({
+      include: { orders: true },
+    });
+  }
+  
+  public getExtendedById(id: Product['id']): Promise<Product | null> {
+    return this.prismaService.product.findUnique({
+      where: { id },
+      include: { orders: true },
     });
   }
     

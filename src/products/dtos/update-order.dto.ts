@@ -1,8 +1,9 @@
 import { Transform } from 'class-transformer';
-import { IsNotEmpty, Length, IsString } from 'class-validator';
+import { IsNotEmpty, Length, IsString, IsUUID } from 'class-validator';
 
 export class UpdateOrderDTO {
   @IsNotEmpty()
+  @IsUUID()
   @IsString()
   productId: string;
 
